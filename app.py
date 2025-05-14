@@ -50,7 +50,7 @@ training001 = my_image.sample(
     geometries=True
 )
 
-n_clusters = 10
+n_clusters = 11
 clusterer_KMeans = ee.Clusterer.wekaKMeans(nClusters=n_clusters).train(training001)
 result001 = my_image.cluster(clusterer_KMeans)
 
