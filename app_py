@@ -14,7 +14,6 @@ st.set_page_config(layout="wide")
 st.title("🌍 使用服務帳戶連接 GEE 的 Streamlit App")
 
 
-
 #ee.Initialize(credentials=lwyi2929)
 ee.Initialize(credentials=credentials) 
 
