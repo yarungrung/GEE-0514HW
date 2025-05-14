@@ -55,7 +55,7 @@ clusterer_KMeans = ee.Clusterer.wekaKMeans(nClusters=n_clusters).train(training0
 result001 = my_image.cluster(clusterer_KMeans)
 
 legend_dict = { 
-    'xero':   '#4b0082',
+    'zero':   '#4b0082',
     'one':    '#ffff4c',
     'two':    '#f096ff',
     'three':  '#00ff7d',
@@ -74,7 +74,7 @@ vis_params_001 = {'min': 0, 'max': 10, 'palette': palette}
 my_Map = geemap.Map()
 my_Map.centerObject(result001, 8)
 my_Map.addLayer(result001, vis_params_001, 'Labelled clusters')
-my_Map.add_legend(title='Land Cover Type', legend_dict=legend_dict, position='bottomright')
+my_Map.add_legend(title='Land Cover Cluster', legend_dict=legend_dict, position='bottomright')
 
 # 左右分割地圖
 left_layer = geemap.ee_tile_layer(result001.randomVisualizer(), {}, 'K-Means clusters')
